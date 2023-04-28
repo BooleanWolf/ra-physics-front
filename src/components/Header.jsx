@@ -13,6 +13,9 @@ const Header = () => {
 
       <div className="flex-none gap-6">
         <div className="">
+          <Link to="/demoLecture" className="mr-6">
+            Demo Lecture
+          </Link>
           <Link to="/" className="mr-6">
             Home
           </Link>

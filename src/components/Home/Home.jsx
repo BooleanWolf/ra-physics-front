@@ -7,10 +7,10 @@ import Contact from "./Contact";
 const Home = () => {
   return (
     <div>
-      <img className="h-96 w-full relative" src={banner} alt="" />
+      <img className="min-h-full w-full relative" src={banner} alt="" />
 
-      <Link className="flex justify-center" to="/register">
-        <button className="btn btn-success -mt-24 absolute opacity-30">
+      <Link className="flex justify-center" to="/courseavailable">
+        <button className="btn btn-info -mt-24 absolute opacity-50">
           Join now
         </button>
       </Link>

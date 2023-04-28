@@ -7,6 +7,7 @@ const App = () => {
   return (
     <div>
       <Header></Header>
+
       <div className="min-h-max">
         <Outlet></Outlet>
       </div>

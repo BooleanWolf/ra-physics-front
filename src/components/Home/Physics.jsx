@@ -1,5 +1,6 @@
 import React from "react";
 import { FaDesktop, FaPenSquare, FaQuestion, FaUserPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Physics = () => {
   return (
@@ -51,7 +52,9 @@ const Physics = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <button className="btn btn-outline btn-info m-8 ">Start Now</button>
+        <Link to="/register">
+          <button className="btn btn-outline btn-info m-8 ">Start Now</button>
+        </Link>
       </div>
       {/* Physics section end here */}
     </div>

@@ -44,17 +44,19 @@ const Contact = () => {
                 className="input input-bordered"
               />
             </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Your Query</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Type here..."
-                className="box-content h-24 border rounded-lg px-2 "
-              />
-            </div>
-            <div className="form-control mt-6">
+            <fieldset>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Your Query</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Type here..."
+                  className="box-content  h-24 border rounded-lg px-2 "
+                />
+              </div>
+            </fieldset>
+            <div className="form-control  mt-6">
               <button className="btn  btn-info ">Send</button>
             </div>
           </div>

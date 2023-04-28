@@ -8,6 +8,11 @@ import Login from "./components/Login.jsx";
 import Register from "./components/Register.jsx";
 import Home from "./components/Home/Home.jsx";
 import Course from "./components/Course.jsx";
+import DemoLecture from "./components/demoLecture.jsx";
+import CourseAvailable from "./components/CourseAvailable.jsx";
+import CourseInfo from "./components/Home/CourseInfo.jsx";
+import Vector from "./components/Vector.jsx";
+import Lecture from "./components/Lecture.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,12 +28,32 @@ const router = createBrowserRouter([
         element: <Course></Course>,
       },
       {
+        path: "/demoLecture",
+        element: <DemoLecture></DemoLecture>,
+      },
+      {
         path: "/login",
         element: <Login></Login>,
       },
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/courseAvailable",
+        element: <CourseAvailable></CourseAvailable>,
+      },
+      {
+        path: "/courseInfo",
+        element: <CourseInfo></CourseInfo>,
+      },
+      {
+        path: "/vector",
+        element: <Vector></Vector>,
+      },
+      {
+        path: "/lecture",
+        element: <Lecture></Lecture>,
       },
     ],
   },
