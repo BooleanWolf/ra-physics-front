@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 
 const Lecture = () => {
+  useTitle("CourseVideo");
   return (
     <div>
       <div className="bg-gradient-to-r from-blue-200 to-green-100  h-80 -mt-20">

@@ -1,8 +1,10 @@
 import React from "react";
 import logo from "../assets/logophysics.png";
 import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
+import useTitle from "../hooks/useTitle";
 
 const Login = () => {
+  useTitle("Login");
   return (
     <div className="hero min-h-max mt-24 lg:px-32">
       <div className="hero-content flex-col lg:flex-row">

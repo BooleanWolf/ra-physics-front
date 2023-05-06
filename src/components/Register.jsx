@@ -2,8 +2,10 @@ import React from "react";
 import { FaGoogle } from "react-icons/fa";
 import avatar from "../assets/avatar.jpeg";
 import { Link } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 
 const Register = () => {
+  useTitle("Register");
   return (
     <div className="hero min-h-max mt-24 lg:px-32">
       <div className="hero-content flex-col lg:flex-row">

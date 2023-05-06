@@ -3,13 +3,17 @@ import banner from "../../assets/banner.jpg";
 import Physics from "./Physics";
 import { Link } from "react-router-dom";
 import Contact from "./Contact";
+import useTitle from "../../hooks/useTitle";
 
 const Home = () => {
+  useTitle("Home");
   return (
     <div>
-      <img className="min-h-full w-full relative" src={banner} alt="" />
+      <div className="lg:mx-32">
+        <img className="min-h-full w-full relative  " src={banner} alt="" />
+      </div>
 
-      <Link className="flex justify-center" to="/courseavailable">
+      <Link className="flex justify-center" to="/register">
         <button className="btn btn-info -mt-24 absolute opacity-50">
           Join now
         </button>

@@ -8,29 +8,39 @@ const Header = () => {
     <div className="navbar bg-base-200  lg:px-32">
       <div className="flex-1 ">
         <img className="w-12" src={logo} alt="" />
-        <a className="btn btn-ghost normal-case text-xl">RA Physics</a>
+        <a className="px-6 normal-case text-xl font-semibold">RA Physics</a>
       </div>
 
       <div className="flex-none gap-6">
         <div className="">
-          <Link to="/demoLecture" className="mr-6">
-            Demo Lecture
-          </Link>
           <Link to="/" className="mr-6">
             Home
           </Link>
-          <Link to="/course" className="mr-12">
+          <Link to="/course" className="mr-6">
+            Dashboard
+          </Link>
+          <Link to="/demolecture" className="mr-6">
+            DemoLecture
+          </Link>
+          <Link to="/Lecture" className="mr-6">
+            CourseVideo
+          </Link>
+          <Link to="/vector" className="mr-6">
+            Incourse
+          </Link>
+
+          <Link to="/courseAvailable" className="mr-12">
             Course
           </Link>
         </div>
-        <div className="form-control ">
-          <FaSearch></FaSearch>
-        </div>
-        <div className="justify-end ">
-          <Link to="/login">
-            <button className=" btn btn-info">Login</button>
-          </Link>
-        </div>
+      </div>
+      <div className="justify-end ">
+        <Link to="/login">
+          <button className=" btn btn-info me-6 ">Login</button>
+        </Link>
+        <Link to="/register">
+          <button className=" btn btn-info">Register</button>
+        </Link>
       </div>
     </div>
   );

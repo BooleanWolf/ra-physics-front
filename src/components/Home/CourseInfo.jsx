@@ -1,6 +1,8 @@
 import React from "react";
+import useTitle from "../../hooks/useTitle";
 
 const CourseInfo = () => {
+  useTitle("CourseInfo");
   return (
     <div className="grid lg:grid-cols-2 mt-16">
       <div className="lg:mx-auto">
