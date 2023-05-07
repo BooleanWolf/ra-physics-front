@@ -14,6 +14,7 @@ import CourseInfo from "./components/Home/CourseInfo.jsx";
 import Vector from "./components/Vector.jsx";
 import Lecture from "./components/Lecture.jsx";
 import DemoLecture from "./components/DemoLecture.jsx";
+import YouTube from "./components/YouTube.jsx";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "/lecture",
         element: <Lecture></Lecture>,
+      },
+      {
+        path: "/youtube",
+        element: <YouTube></YouTube>,
       },
     ],
   },

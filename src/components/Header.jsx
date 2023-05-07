@@ -13,24 +13,27 @@ const Header = () => {
 
       <div className="flex-none gap-6">
         <div className="">
-          <Link to="/" className="mr-6">
+          <Link to="/" className="mr-5">
             Home
           </Link>
-          <Link to="/course" className="mr-6">
+          <Link to="/course" className="mr-5">
             Dashboard
           </Link>
-          <Link to="/demolecture" className="mr-6">
+          <Link to="/demolecture" className="mr-5">
             DemoLecture
           </Link>
-          <Link to="/Lecture" className="mr-6">
+          <Link to="/Lecture" className="mr-5">
             CourseVideo
           </Link>
-          <Link to="/vector" className="mr-6">
+          <Link to="/vector" className="mr-5">
             Incourse
           </Link>
 
-          <Link to="/courseAvailable" className="mr-12">
+          <Link to="/courseAvailable" className="mr-5">
             Course
+          </Link>
+          <Link to="/youtube" className="mr-6">
+            YouTube
           </Link>
         </div>
       </div>
