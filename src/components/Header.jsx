@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <nav className="bg-gray-800  ">
       <div className="max-w-8xl mx-auto    sm:px-6 lg:px-20 ">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <Link className="flex-shrink-0">
               <img className="h-8 w-8" src={logo} alt="Logo" />
@@ -37,7 +37,7 @@ const Header = () => {
                   Dashboard
                 </Link>
                 <Link
-                  to="/"
+                  to="/demolecture"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   DemoLecture
@@ -82,7 +82,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="mr-2 flex md:hidden lg:hidden">
+          <div className="mr-2  flex md:hidden lg:hidden">
             <button
               onClick={toggleNavbar}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"

@@ -13,7 +13,7 @@ const CourseAvailable = () => {
         </h2>
       </div>
       {/* card */}
-      <div className="mx-32 card lg:card-side bg-base-100 shadow-xl  my-16">
+      <div className="lg:mx-32 m-8 card lg:card-side bg-base-100 shadow-xl  my-16">
         <figure>
           <img className="rounded-r-lg" src={avatar} alt="Album" />
         </figure>

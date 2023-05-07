@@ -16,7 +16,7 @@ const Lecture = () => {
         <span></span>
       </div>
       <p
-        className="font-semibold mx-auto lg:mx-60
+        className="font-semibold mx-16 text-2xl
       "
       >
         Lecture 1: Introduction to Vector
