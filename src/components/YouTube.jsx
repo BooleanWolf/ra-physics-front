@@ -22,12 +22,12 @@ const YouTube = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-blue-200  to-blue-400 min-h-max  ">
+    <div className="bg-gradient-to-r from-blue-200 px-6 to-blue-400 min-h-max  ">
       <div className=" lg:mx-16 py-12">
         <h2 className="text-2xl font-semibold text-center py-12 text-white">
           YouTube Video
         </h2>
-        <Slider {...settings}>
+        <Slider className="" {...settings}>
           <Link target="_blank" to="https://youtu.be/i4bvgVKZgQ4">
             <img className="rounded-lg" src={image} alt="" />
           </Link>

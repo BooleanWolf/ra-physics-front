@@ -7,13 +7,13 @@ const CourseAvailable = () => {
   useTitle("CourseAvailable");
   return (
     <div>
-      <div className="bg-gradient-to-r from-blue-200 to-green-100  h-80 -mt-20">
+      <div className="bg-gradient-to-r from-blue-200 to-green-100  h-80 ">
         <h2 className="text-3xl font-bold text-center py-36">
           Courses Available
         </h2>
       </div>
       {/* card */}
-      <div className="mx-32 card lg:card-side bg-base-100 shadow-xl lg:h-80 mt-16">
+      <div className="mx-32 card lg:card-side bg-base-100 shadow-xl  my-16">
         <figure>
           <img className="rounded-r-lg" src={avatar} alt="Album" />
         </figure>

@@ -5,9 +5,9 @@ import useTitle from "../hooks/useTitle";
 const DemoLecture = () => {
   useTitle("DemoLecture");
   return (
-    <div>
+    <div className="mb-12">
       <div>
-        <div className="bg-gradient-to-r from-blue-200 to-green-100  h-80 -mt-20">
+        <div className="bg-gradient-to-r from-blue-200 to-green-100   mb-12">
           <h2 className="text-3xl font-bold text-center py-36">
             Demo Lectures
           </h2>

@@ -5,7 +5,7 @@ const Vector = () => {
   useTitle("Incourse");
   return (
     <div>
-      <div className="bg-gradient-to-r from-blue-200 to-green-100  h-80 -mt-20">
+      <div className="bg-gradient-to-r from-blue-200 to-green-100  h-80 ">
         <h2 className="text-3xl font-bold text-center py-36">Vector</h2>
       </div>
       <div className="grid lg:grid-cols-4 m-12 lg:mx-28 lg:my-12 gap-8">

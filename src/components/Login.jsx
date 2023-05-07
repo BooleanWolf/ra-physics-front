@@ -6,7 +6,7 @@ import useTitle from "../hooks/useTitle";
 const Login = () => {
   useTitle("Login");
   return (
-    <div className="hero min-h-max mt-24 lg:px-32">
+    <div className="hero min-h-max mt-24 lg:px-32 mb-16">
       <div className="hero-content flex-col lg:flex-row">
         <div className="items-center lg:text-left ">
           <img className="w-full lg:w-2/3 " src={logo} alt="" />

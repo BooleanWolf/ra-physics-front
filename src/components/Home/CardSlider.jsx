@@ -12,7 +12,7 @@ const CardSlider = () => {
     slidesToScroll: 3,
   };
   return (
-    <div className="  ">
+    <div className="mx-8">
       <h2 className="text-2xl font-semibold text-center my-12 ">
         Course Video
       </h2>
