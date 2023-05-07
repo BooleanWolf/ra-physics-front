@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slick-prev:before,
+.slick-next:before {
+  color: #c50b0b;
+  margin-right: 4px;
+}
+
+/* CSS to style the dots */
+.slick-dots li button:before {
+  color: #000;
+}
+
+/* CSS to style the active dot */
+
+/* CSS to style the button container */
+.slick-arrow {
+  background-color: #fff;
+  margin-top: -30px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  z-index: 1;
+  margin-right: 4px;
+}
+
+/* CSS to style the button container on hover */
+.slick-arrow:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
