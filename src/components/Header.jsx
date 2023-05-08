@@ -32,24 +32,24 @@ const Header = () => {
                     >
                       Home
                     </Link>
-                    <Link
+                    {/* <Link
                       to="/course"
                       className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Dashboard
-                    </Link>
-                    <Link
+                    </Link> */}
+                    {/* <Link
                       to="/demolecture"
                       className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
                       DemoLecture
-                    </Link>
-                    <Link
+                    </Link> */}
+                    {/* <Link
                       to="/Lecture"
                       className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
                       CourseVideo
-                    </Link>
+                    </Link> */}
                     <Link
                       to="/vector"
                       className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"

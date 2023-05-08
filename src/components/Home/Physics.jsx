@@ -12,43 +12,50 @@ const Physics = () => {
         </h2>
         <div className="grid lg:grid-cols-4 gap-12 px-12 py-8 lg:px-32 lg:py-5 ">
           <div>
-            <button className="btn btn-circle btn-outline text-white">
+            <button className="btn btn-circle btn-outline text-white hover:bg-white hover:text-black hover:border-none">
               <FaUserPlus></FaUserPlus>
             </button>
             <h1 className="text-2xl font-bold">1.</h1>
             <p>
               <small>
-                Montes vivamus curae quisque et primis pretium nullam. Congue
-                dis convallis eget ipsum cubilia ante.
+                RA Physics ensures to enhance your basic in physics and
+                guarantee your accuracy in any competitive exams.
               </small>
             </p>
           </div>
           <div>
-            <button className="btn btn-circle btn-outline text-white">
+            <button className="btn btn-circle btn-outline text-white hover:bg-white hover:text-black hover:border-none">
               <FaDesktop></FaDesktop>
             </button>
             <h1 className="text-2xl font-bold">2.</h1>
             <p>
-              <small>Access to question bank of over 2000 questions</small>
+              <small>
+                RA Physics nurtures its students with full dedication to make
+                them well prepared with more than 50+ tests and quizzes.
+              </small>
             </p>
           </div>
           <div>
-            <button className="btn btn-circle btn-outline text-white">
+            <button className="btn btn-circle btn-outline text-white hover:bg-white hover:text-black hover:border-none">
               <FaQuestion></FaQuestion>
             </button>
             <h1 className="text-2xl font-bold">3.</h1>
             <p>
-              <small>aaaaaaaaaaaaaaaaaaaaaaaaaa</small>
+              <small>
+                RA Physics is friendly to its students helping out all the
+                students to mitigate their confusions.
+              </small>
             </p>
           </div>
           <div>
-            <button className="btn btn-circle btn-outline text-white">
+            <button className="btn btn-circle btn-outline text-white hover:bg-white hover:text-black hover:border-none">
               <FaPenSquare></FaPenSquare>
             </button>
             <h1 className="text-2xl font-bold">4.</h1>
             <p>
               <small>
-                compare your results with your peers' with advanced analytics
+                RA Physics makes its students consistent in learning and achieve
+                his/her ultimate success.
               </small>
             </p>
           </div>

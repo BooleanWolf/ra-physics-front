@@ -21,39 +21,27 @@ const Home = () => {
 
       {/* banner end here */}
 
-      <div className="">
+      <div className="h-72">
         <h2 className="text-2xl font-semibold text-center mt-24">
           Our Success
         </h2>
-        <div className="grid   gap-5 lg:grid-cols-5 text-center lg:px-40 lg:py-8">
+        <div className="grid  mt-8 gap-5 lg:grid-cols-3 text-center  lg:px-40 lg:py-8">
           <div>
-            <h1 className="text-2xl font-bold">15K+</h1>
+            <h1 className="text-2xl font-bold">2K+</h1>
             <p>
               <small>Number of students</small>
             </p>
           </div>
           <div>
-            <h1 className="text-2xl font-bold">75%</h1>
+            <h1 className="text-2xl font-bold">100%</h1>
             <p>
               <small>Percentage of success</small>
             </p>
           </div>
           <div>
-            <h1 className="text-2xl font-bold">35</h1>
+            <h1 className="text-2xl font-bold">10k+</h1>
             <p>
               <small>Numbers of questions</small>
-            </p>
-          </div>
-          <div>
-            <h1 className="text-2xl font-bold">25+</h1>
-            <p>
-              <small>Number of experts</small>
-            </p>
-          </div>
-          <div>
-            <h1 className="text-2xl font-bold">15K+</h1>
-            <p>
-              <small>Number of students</small>
             </p>
           </div>
         </div>
