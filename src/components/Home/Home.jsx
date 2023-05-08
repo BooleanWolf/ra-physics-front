@@ -9,7 +9,7 @@ const Home = () => {
   useTitle("Home");
   return (
     <div className="mb-16">
-      <div className="lg:mx-20">
+      <div className="">
         <img className="min-h-full w-full relative  " src={banner} alt="" />
       </div>
 
