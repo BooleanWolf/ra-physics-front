@@ -16,8 +16,8 @@ const Header = () => {
           <div className="max-w-8xl mx-auto    sm:px-6 lg:px-20 ">
             <div className="flex items-center justify-between h-20">
               <div className="flex items-center">
-                <Link className="flex-shrink-0">
-                  <img className="h-8 w-8" src={logo} alt="Logo" />
+                <Link className="flex-shrink-0 ">
+                  <img className=" h-8 w-8" src={logo} alt="Logo" />
                 </Link>
                 <Link className="flex-shrink-0">
                   <h2 className="text-white px-3 py-2 rounded-md text-sm font-medium">
@@ -136,13 +136,13 @@ const Header = () => {
           >
             Home
           </Link>
-          <Link
+          {/* <Link
             to="/course"
             className="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
           >
             Dashboard
-          </Link>
-          <Link
+          </Link> */}
+          {/* <Link
             to="/demolecture"
             className="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
           >
@@ -153,7 +153,7 @@ const Header = () => {
             className="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
           >
             CourseVideo
-          </Link>
+          </Link> */}
           <Link
             to="/vector"
             className="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
