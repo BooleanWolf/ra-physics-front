@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "title": "Chapter 1: Physical World and Measurement (First paper) ",
+    "details": "This chapter teaches the basics of measurement and physical quantities.",
+    "price": 9000,
+    "image": "https://media.istockphoto.com/id/661477340/photo/hand-writing-complicated-math-equation.jpg?s=612x612&w=0&k=20&c=WeQCM7IyjaMflK2NuFa2doLl9x_jpaZ3QEguNZKmpW8="
+  },
+  {
+    "id": 2,
+    "title": "Chapter 2: Vector (First paper) ",
+    "details": "This chapter mainly teaches about vector quantities.",
+    "price": 9000,
+    "image": "https://media.istockphoto.com/id/661477340/photo/hand-writing-complicated-math-equation.jpg?s=612x612&w=0&k=20&c=WeQCM7IyjaMflK2NuFa2doLl9x_jpaZ3QEguNZKmpW8="
+  },
+  {
+    "id": 3,
+    "title": "Chapter 3: Dynamics (First paper)",
+    "details": "This chapter contains a clear idea about motion of moving objects and their calculation.",
+    "price": 9000,
+    "image": "https://media.istockphoto.com/id/661477340/photo/hand-writing-complicated-math-equation.jpg?s=612x612&w=0&k=20&c=WeQCM7IyjaMflK2NuFa2doLl9x_jpaZ3QEguNZKmpW8="
+  },
+  {
+    "id": 4,
+    "title": "Chapter 4: Newtonian Mechanics (First paper)",
+    "details": "This chapter will let you know about different laws of Newtonian mechanics and it's application.",
+    "price": 9000,
+    "image": "https://media.istockphoto.com/id/661477340/photo/hand-writing-complicated-math-equation.jpg?s=612x612&w=0&k=20&c=WeQCM7IyjaMflK2NuFa2doLl9x_jpaZ3QEguNZKmpW8="
+  },
+  {
+    "id": 5,
+    "title": "Chapter 5: Work, Energy and Power (First paper)",
+    "details": "This chapter gives you a clear idea about work, power and energy.",
+    "price": 9000,
+    "image": "https://media.istockphoto.com/id/661477340/photo/hand-writing-complicated-math-equation.jpg?s=612x612&w=0&k=20&c=WeQCM7IyjaMflK2NuFa2doLl9x_jpaZ3QEguNZKmpW8="
+  },
+  {
+    "id": 6,
+    "title": "Chapter 6: Gravitation and gravity (First paper)",
+    "details": "This chapter teaches you about different laws of gravitation.",
+    "price": 9000,
+    "image": "https://media.istockphoto.com/id/661477340/photo/hand-writing-complicated-math-equation.jpg?s=612x612&w=0&k=20&c=WeQCM7IyjaMflK2NuFa2doLl9x_jpaZ3QEguNZKmpW8="
+  },
+  {
+    "id": 7,
+    "title": "Chapter 7: Structural properties of matter (First paper)",
+    "details": "This chapter is about solid, liquid and gaseous matter and how they behave in different situations.",
+    "price": 9000,
+    "image": "https://media.istockphoto.com/id/661477340/photo/hand-writing-complicated-math-equation.jpg?s=612x612&w=0&k=20&c=WeQCM7IyjaMflK2NuFa2doLl9x_jpaZ3QEguNZKmpW8="
+  },
+  {
+    "id": 8,
+    "title": "Chapter 8: Periodic motion (First paper)",
+    "details": "This chapter teacher you the basics of a motion called periodic motion.",
+    "price": 9000,
+    "image": "https://media.istockphoto.com/id/661477340/photo/hand-writing-complicated-math-equation.jpg?s=612x612&w=0&k=20&c=WeQCM7IyjaMflK2NuFa2doLl9x_jpaZ3QEguNZKmpW8="
+  },
+  {
+    "id": 9,
+    "title": "Chapter 9: Wave (First paper) ",
+    "details": "You will know about the mechanism of waves in this chapter.",
+    "price": 9000,
+    "image": "https://media.istockphoto.com/id/661477340/photo/hand-writing-complicated-math-equation.jpg?s=612x612&w=0&k=20&c=WeQCM7IyjaMflK2NuFa2doLl9x_jpaZ3QEguNZKmpW8="
+  },
+  {
+    "id": 10,
+    "title": "Chapter 10: Ideal gas and kinetic theory of gas (First paper)",
+    "details": "This chapter will let you know about ideal gases and kinetic theory of gas.",
+    "price": 9000,
+    "image": "https://media.istockphoto.com/id/661477340/photo/hand-writing-complicated-math-equation.jpg?s=612x612&w=0&k=20&c=WeQCM7IyjaMflK2NuFa2doLl9x_jpaZ3QEguNZKmpW8="
+  },
+  {
+    "id": 11,
+    "title": "Chapter 8: Periodic motion (First paper)",
+    "details": "This chapter teacher you the basics of a motion called periodic motion.",
+    "price": 9000,
+    "image": "https://media.istockphoto.com/id/661477340/photo/hand-writing-complicated-math-equation.jpg?s=612x612&w=0&k=20&c=WeQCM7IyjaMflK2NuFa2doLl9x_jpaZ3QEguNZKmpW8="
+  }
+]

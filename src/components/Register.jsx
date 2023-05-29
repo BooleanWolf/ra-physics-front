@@ -1,11 +1,95 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
 import avatar from "../assets/avatar.jpeg";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useTitle from "../hooks/useTitle";
+import { AuthContext } from "./Provider/Provider";
+import Swal from "sweetalert2";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   useTitle("Register");
+  const { createUser, googleLogin } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  const handleRegister = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const photo = form.photo.value;
+    const password = form.password.value;
+
+    if (password.length < 6) {
+      Swal.fire({
+        title: "Try Again!",
+        text: "Password Must be 6 characters long",
+        icon: "warning",
+        imageWidth: 400,
+        imageHeight: 200,
+      });
+
+      return;
+    }
+
+    createUser(email, password)
+      .then((result) => {
+        const createdUser = result.user;
+
+        profileUpdate(name, photo, createdUser);
+        navigate("/");
+        if (createdUser) {
+          Swal.fire({
+            title: "Great!",
+            text: "Successfully SignUp",
+            icon: "success",
+            imageWidth: 400,
+            imageHeight: 200,
+          });
+        }
+      })
+      .catch((error) => {
+        if (error) {
+          Swal.fire({
+            title: "Try Again",
+            text: "Something Wrong",
+            icon: "warning",
+            imageWidth: 400,
+            imageHeight: 200,
+          });
+        }
+      });
+  };
+
+  const profileUpdate = (name, photo, createdUser) => {
+    updateProfile(createdUser, {
+      displayName: name,
+      photoURL: photo,
+    })
+      .then((result) => {
+        const createdUser = result.user;
+        console.log(createdUser);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then((result) => {
+        const loggedUser = result.user;
+
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="hero min-h-max mt-24 lg:px-32 mb-16">
       <div className="hero-content flex-col lg:flex-row">
@@ -17,48 +101,61 @@ const Register = () => {
             Create an Account
           </h2>
           <div className="card-body">
+            <form onSubmit={handleRegister}>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Name</span>
+                </label>
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Name"
+                  className="input input-bordered"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Email</span>
+                </label>
+                <input
+                  name="email"
+                  type="text"
+                  placeholder="E-mail"
+                  className="input input-bordered"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Photo Optional</span>
+                </label>
+                <input
+                  name="photo"
+                  type="text"
+                  placeholder="enter your photo url"
+                  className="input input-bordered"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Password</span>
+                </label>
+                <input
+                  name="password"
+                  type="password"
+                  placeholder="password"
+                  className="input input-bordered"
+                />
+              </div>
+              <div className="form-control mt-6">
+                <button className="btn btn-outline btn-ghost mb-2">
+                  Create Account
+                </button>
+              </div>
+            </form>
             <div className="form-control">
-              <label className="label">
-                <span className="label-text">Name</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Name"
-                className="input input-bordered"
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="text"
-                placeholder="E-mail"
-                className="input input-bordered"
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="text"
-                placeholder="password"
-                className="input input-bordered"
-              />
-              <label className="label">
-                <a href="#" className="label-text-alt link link-hover ">
-                  Forgot password?
-                </a>
-              </label>
-            </div>
-            <div className="form-control mt-6">
-              <button className="btn btn-outline btn-ghost mb-2">
-                Create Account
-              </button>
-              <button className="btn btn-info">
+              <button onClick={handleGoogleLogin} className="btn btn-info">
                 <FaGoogle className="text-white mr-1"> </FaGoogle>
-                Sign up with Google
+                Sign in with Google
               </button>
             </div>
             <div className="mt-8">

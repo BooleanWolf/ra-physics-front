@@ -1,10 +1,24 @@
-import React from "react";
-import avatar from "../assets/course.avif";
-import { Link } from "react-router-dom";
 import useTitle from "../hooks/useTitle";
+
+import AllCourseCard from "./AllCourseCard";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "./Provider/Provider";
 
 const CourseAvailable = () => {
   useTitle("CourseAvailable");
+  // const data = useLoaderData();
+  const { loading } = useContext(AuthContext);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("courses.json")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+    if (loading) {
+      return <progress className="progress w-56 "></progress>;
+    }
+  }, []);
+
   return (
     <div>
       <div className="bg-gradient-to-r from-blue-200 to-green-100  h-80 ">
@@ -12,23 +26,9 @@ const CourseAvailable = () => {
           Courses Available
         </h2>
       </div>
-      {/* card */}
-      <div className="lg:mx-32 m-8 card lg:card-side bg-base-100 shadow-xl  my-16">
-        <figure>
-          <img className="rounded-r-lg" src={avatar} alt="Album" />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">Vector </h2>
-          <p>Sign up to get full access to XYZ amount of questions library</p>
-          <div className="card-actions justify-end ">
-            <Link to="/courseInfo">
-              <button className="btn  bg-gradient-to-r from-blue-500 to-green-300 border-none">
-                Buy
-              </button>
-            </Link>
-          </div>
-        </div>
-      </div>
+      {data.map((course) => (
+        <AllCourseCard course={course} key={course.id}></AllCourseCard>
+      ))}
     </div>
   );
 };

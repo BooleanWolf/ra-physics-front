@@ -1,8 +1,13 @@
 import React from "react";
 import useTitle from "../../hooks/useTitle";
+import { useLoaderData } from "react-router-dom";
 
 const CourseInfo = () => {
   useTitle("CourseInfo");
+  const dynamic = useLoaderData();
+
+  const { image, title, price } = dynamic;
+
   return (
     <div className="grid lg:grid-cols-2 mt-16">
       <div className="lg:mx-auto">

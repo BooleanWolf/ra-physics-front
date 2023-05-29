@@ -1,9 +1,30 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { AuthContext } from "./Provider/Provider";
+import Swal from "sweetalert2";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        Swal.fire({
+          title: "LogOut Successful",
+          showClass: {
+            popup: "animate__animated animate__fadeInDown",
+          },
+          hideClass: {
+            popup: "animate__animated animate__fadeOutUp",
+          },
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -60,7 +81,7 @@ const Header = () => {
                       to="/courseAvailable"
                       className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
-                      Course
+                      My Programs
                     </Link>
                     <Link
                       to="/youtube"
@@ -108,22 +129,48 @@ const Header = () => {
           </div>
         </div>
         <div className=" lg:flex items-center hidden lg:visible me-20">
+          <div className="text-white me-3 my-1">
+            {user ? (
+              <div className="flex gap-2">
+                <p>Hi,</p>
+                {user.displayName}
+                <img
+                  className="rounded-full h-8 w-8"
+                  src={user.photoURL}
+                  alt=""
+                />
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
           <div>
-            <Link
-              to="/login"
-              className=" text-white  px-3 py-2 rounded-md text-sm font-medium"
-            >
-              <button className="btn btn-outline btn-info">Login</button>
-            </Link>
+            {user?.email ? (
+              <button
+                onClick={handleLogOut}
+                className=" bg-green-300  px-4 py-2 rounded hover:bg-green-200 mr-2"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link to="/login">
+                <button className="bg-green-300  px-4 py-2 rounded hover:bg-green-200 mr-2">
+                  Login
+                </button>
+              </Link>
+            )}
           </div>
 
           <div>
-            <Link
-              to="/register"
-              className="  text-white  px-3 py-2 rounded-md text-sm font-medium"
-            >
-              <button className="btn btn-outline btn-info">Register</button>
-            </Link>
+            {user?.email ? (
+              ""
+            ) : (
+              <Link to="/register">
+                <button className="bg-green-300   px-4 py-2 rounded hover:bg-green-200">
+                  Register
+                </button>
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -164,7 +211,7 @@ const Header = () => {
             to="/courseAvailable"
             className="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
           >
-            Course
+            My Programs
           </Link>
           <Link
             to="/youtube"
@@ -173,18 +220,44 @@ const Header = () => {
             YouTube
           </Link>
 
-          <Link
-            to="/login"
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out"
-          >
-            <button className="btn btn-info">Login</button>
-          </Link>
-          <Link
-            to="/register"
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out"
-          >
-            <button className="btn btn-info">Register</button>
-          </Link>
+          <div className="text-white">
+            {user ? (
+              <div className="my-2 flex gap-2">
+                <p>Hi,</p>
+                {user.displayName}
+                <img
+                  className=" rounded-full h-8 w-8"
+                  src={user.photoURL}
+                  alt=""
+                />
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
+          {user?.email ? (
+            <button
+              onClick={handleLogOut}
+              className=" bg-green-300  px-4 py-2 rounded hover:bg-green-200 mr-2"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link to="/login">
+              <button className="bg-green-300  px-4 py-2 rounded hover:bg-green-200 mr-2">
+                Login
+              </button>
+            </Link>
+          )}
+          {user?.email ? (
+            ""
+          ) : (
+            <Link to="/register">
+              <button className="bg-green-300   px-4 py-2 rounded hover:bg-green-200">
+                Register
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </nav>
