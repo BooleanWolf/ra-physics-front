@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import logo from "../assets/logophysics.png";
-import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
 import useTitle from "../hooks/useTitle";
 import Swal from "sweetalert2";
 import { AuthContext } from "./Provider/Provider";
@@ -91,14 +90,6 @@ const Login = () => {
                 </h2>
               </div>
             </form>
-            <div className="mt-8">
-              <h2 className="text-center text-1xl font-semibold">Login With</h2>
-              <div className="flex justify-center gap-5 m-4">
-                <FaFacebook></FaFacebook>
-                <FaApple></FaApple>
-                <FaGoogle></FaGoogle>
-              </div>
-            </div>
           </div>
         </div>
       </div>

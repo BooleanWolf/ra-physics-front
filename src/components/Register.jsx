@@ -21,6 +21,8 @@ const Register = () => {
     const email = form.email.value;
     const photo = form.photo.value;
     const password = form.password.value;
+    const hsc_batch = form.hsc_batch.value;
+    const phone_number = form.phone_number.value;
 
     if (password.length < 6) {
       Swal.fire({
@@ -42,10 +44,15 @@ const Register = () => {
         navigate("/");
 
         const role = "students";
+        const courseList = "";
         const newUsers = {
           displayName: name,
           email: createdUser.email,
-          image: createUser.photoURL,
+          image: createUser.photoURL, // Unnecessary
+          courseList,
+          photoURL: photo,
+          phoneNumber: phone_number,
+          hscBatch: hsc_batch,
           role,
         };
         fetch(`https://physics-server.vercel.app/users`, {
@@ -135,6 +142,28 @@ const Register = () => {
               </div>
               <div className="form-control">
                 <label className="label">
+                  <span className="label-text">HSC-Batch</span>
+                </label>
+                <input
+                  name="hsc_batch"
+                  type="text"
+                  placeholder="HSC Batch"
+                  className="input input-bordered"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Phone Number</span>
+                </label>
+                <input
+                  name="phone_number"
+                  type="text"
+                  placeholder="Phone Number"
+                  className="input input-bordered"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
                   <span className="label-text">Email</span>
                 </label>
                 <input
@@ -146,12 +175,12 @@ const Register = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Photo Optional</span>
+                  <span className="label-text">Photo (Optional)</span>
                 </label>
                 <input
                   name="photo"
                   type="text"
-                  placeholder="enter your photo url"
+                  placeholder="Enter Your Photo Url"
                   className="input input-bordered"
                 />
               </div>
@@ -162,7 +191,7 @@ const Register = () => {
                 <input
                   name="password"
                   type="password"
-                  placeholder="password"
+                  placeholder="Password"
                   className="input input-bordered"
                 />
               </div>
@@ -172,12 +201,12 @@ const Register = () => {
                 </button>
               </div>
             </form>
-            <div className="form-control">
+            {/* <div className="form-control">
               <button onClick={handleGoogleLogin} className="btn btn-info">
                 <FaGoogle className="text-white mr-1"> </FaGoogle>
                 Sign in with Google
               </button>
-            </div>
+            </div> */}
             <div className="mt-8">
               <h2 className="text-center text-1xl font-semibold">
                 Already have an account?

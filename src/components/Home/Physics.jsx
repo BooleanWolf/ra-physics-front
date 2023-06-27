@@ -6,58 +6,68 @@ import CardSlides from "./CardSlider";
 const Physics = () => {
   return (
     <>
-      <div className="bg-indigo-500 text-white">
+      <div className="bg-indigo-500 ">
         <h2 className="text-center text-2xl font-semibold m-5 p-5">
           Why RA Physics?
         </h2>
-        <div className="grid lg:grid-cols-4 gap-12 px-12 py-8 lg:px-32 lg:py-5 ">
-          <div>
-            <button className="btn btn-circle btn-outline text-white hover:bg-white hover:text-black hover:border-none">
-              <FaUserPlus></FaUserPlus>
-            </button>
-            <h1 className="text-2xl font-bold">1.</h1>
-            <p>
-              <small>
-                RA Physics ensures to enhance your basic in physics and
-                guarantee your accuracy in any competitive exams.
-              </small>
-            </p>
+        <div className="flex justify-center gap-10 mt-5 lg:flex-cols-4 py-8  lg:py-5">
+          <div className="card  card-compact w-60 bg-base-100  shadow-xl">
+            <figure>
+              <img
+                src="https://scontent.frjh1-1.fna.fbcdn.net/v/t39.30808-6/230259822_1994912683997941_9071555770434079385_n.jpg?stp=dst-jpg_p180x540&_nc_cat=105&cb=99be929b-3346023f&ccb=1-7&_nc_sid=825194&_nc_eui2=AeF8L7N_OV0WrLBRIyHJahczVSaQjJwpj9BVJpCMnCmP0IBXM1d0SNGCoQETn6KspaE4XwQO5ovZMdxP_pnVI1qR&_nc_ohc=3pGKsnZA5aYAX9UhDUh&_nc_ht=scontent.frjh1-1.fna&oh=00_AfAAgqcpDsyyvxAKJQ2q8Jxkth_NGoPcE7JY0GN2rL08gQ&oe=649F69A3"
+                alt="Shoes"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">Vector-1</h2>
+              <p>Baisc Thermodynamics | From Basic to Pro | RA Physics</p>
+              <div className="card-actions justify-end"></div>
+            </div>
           </div>
           <div>
-            <button className="btn btn-circle btn-outline text-white hover:bg-white hover:text-black hover:border-none">
-              <FaDesktop></FaDesktop>
-            </button>
-            <h1 className="text-2xl font-bold">2.</h1>
-            <p>
-              <small>
-                RA Physics nurtures its students with full dedication to make
-                them well prepared with more than 50+ tests and quizzes.
-              </small>
-            </p>
+            <div className="card card-compact  w-60 bg-base-100 shadow-xl">
+              <figure>
+                <img
+                  src="https://scontent.frjh1-1.fna.fbcdn.net/v/t39.30808-6/230259822_1994912683997941_9071555770434079385_n.jpg?stp=dst-jpg_p180x540&_nc_cat=105&cb=99be929b-3346023f&ccb=1-7&_nc_sid=825194&_nc_eui2=AeF8L7N_OV0WrLBRIyHJahczVSaQjJwpj9BVJpCMnCmP0IBXM1d0SNGCoQETn6KspaE4XwQO5ovZMdxP_pnVI1qR&_nc_ohc=3pGKsnZA5aYAX9UhDUh&_nc_ht=scontent.frjh1-1.fna&oh=00_AfAAgqcpDsyyvxAKJQ2q8Jxkth_NGoPcE7JY0GN2rL08gQ&oe=649F69A3"
+                  alt="Shoes"
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">Vector-2</h2>
+                <p>Baisc Thermodynamics | From Basic to Pro | RA Physics</p>
+                <div className="card-actions justify-end"></div>
+              </div>
+            </div>
           </div>
           <div>
-            <button className="btn btn-circle btn-outline text-white hover:bg-white hover:text-black hover:border-none">
-              <FaQuestion></FaQuestion>
-            </button>
-            <h1 className="text-2xl font-bold">3.</h1>
-            <p>
-              <small>
-                RA Physics is friendly to its students helping out all the
-                students to mitigate their confusions.
-              </small>
-            </p>
+            <div className="card card-compact  w-60 bg-base-100 shadow-xl">
+              <figure>
+                <img
+                  src="https://scontent.frjh1-1.fna.fbcdn.net/v/t39.30808-6/230259822_1994912683997941_9071555770434079385_n.jpg?stp=dst-jpg_p180x540&_nc_cat=105&cb=99be929b-3346023f&ccb=1-7&_nc_sid=825194&_nc_eui2=AeF8L7N_OV0WrLBRIyHJahczVSaQjJwpj9BVJpCMnCmP0IBXM1d0SNGCoQETn6KspaE4XwQO5ovZMdxP_pnVI1qR&_nc_ohc=3pGKsnZA5aYAX9UhDUh&_nc_ht=scontent.frjh1-1.fna&oh=00_AfAAgqcpDsyyvxAKJQ2q8Jxkth_NGoPcE7JY0GN2rL08gQ&oe=649F69A3"
+                  alt="Shoes"
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">Vector-3</h2>
+                <p>Baisc Thermodynamics | From Basic to Pro | RA Physics</p>
+                <div className="card-actions justify-end"></div>
+              </div>
+            </div>
           </div>
           <div>
-            <button className="btn btn-circle btn-outline text-white hover:bg-white hover:text-black hover:border-none">
-              <FaPenSquare></FaPenSquare>
-            </button>
-            <h1 className="text-2xl font-bold">4.</h1>
-            <p>
-              <small>
-                RA Physics makes its students consistent in learning and achieve
-                his/her ultimate success.
-              </small>
-            </p>
+            <div className="card card-compact  w-60 bg-base-100 shadow-xl">
+              <figure>
+                <img
+                  src="https://scontent.frjh1-1.fna.fbcdn.net/v/t39.30808-6/230259822_1994912683997941_9071555770434079385_n.jpg?stp=dst-jpg_p180x540&_nc_cat=105&cb=99be929b-3346023f&ccb=1-7&_nc_sid=825194&_nc_eui2=AeF8L7N_OV0WrLBRIyHJahczVSaQjJwpj9BVJpCMnCmP0IBXM1d0SNGCoQETn6KspaE4XwQO5ovZMdxP_pnVI1qR&_nc_ohc=3pGKsnZA5aYAX9UhDUh&_nc_ht=scontent.frjh1-1.fna&oh=00_AfAAgqcpDsyyvxAKJQ2q8Jxkth_NGoPcE7JY0GN2rL08gQ&oe=649F69A3"
+                  alt="Shoes"
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">Vector-4</h2>
+                <p>Baisc Thermodynamics | From Basic to Pro | RA Physics</p>
+                <div className="card-actions justify-end"></div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="flex justify-center">
