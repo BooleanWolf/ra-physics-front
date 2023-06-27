@@ -37,9 +37,29 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         const createdUser = result.user;
-
+        console.log(createdUser);
         profileUpdate(name, photo, createdUser);
         navigate("/");
+
+        const role = "students";
+        const newUsers = {
+          displayName: name,
+          email: createdUser.email,
+          image: createUser.photoURL,
+          role,
+        };
+        fetch(`https://physics-server.vercel.app/users`, {
+          method: "POST",
+          headers: {
+            "content-Type": "application/json",
+          },
+          body: JSON.stringify(newUsers),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          });
+
         if (createdUser) {
           Swal.fire({
             title: "Great!",

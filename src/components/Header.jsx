@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { AuthContext } from "./Provider/Provider";
@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [allUsers, setAllUsers] = useState([]);
   const { user, logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
@@ -30,6 +31,14 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    fetch("https://physics-server.vercel.app/users")
+      .then((res) => res.json())
+      .then((data) => setAllUsers(data));
+  }, []);
+
+  const useAdmin = allUsers.find((n) => n?.email == user?.email);
+
   return (
     <nav className="bg-gray-800  ">
       <div className="lg:flex justify-between">
@@ -53,12 +62,16 @@ const Header = () => {
                     >
                       Home
                     </Link>
-                    {/* <Link
-                      to="/course"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      Dashboard
-                    </Link> */}
+                    {useAdmin?.role == "admin" ? (
+                      <Link
+                        to="/allUser"
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                      >
+                        AllUsers
+                      </Link>
+                    ) : (
+                      ""
+                    )}
                     {/* <Link
                       to="/demolecture"
                       className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -183,12 +196,12 @@ const Header = () => {
           >
             Home
           </Link>
-          {/* <Link
-            to="/course"
+          <Link
+            to="/allUser"
             className="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
           >
             Dashboard
-          </Link> */}
+          </Link>
           {/* <Link
             to="/demolecture"
             className="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"

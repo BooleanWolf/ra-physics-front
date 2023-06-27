@@ -17,6 +17,7 @@ import DemoLecture from "./components/DemoLecture.jsx";
 import YouTube from "./components/YouTube.jsx";
 import AuthProvider from "./components/Provider/Provider.jsx";
 import PrivateRoute from "./components/Private/PrivateRoute.jsx";
+import AllUsers from "./components/AllUsers/AllUsers.jsx";
 
 const router = createBrowserRouter([
   {
@@ -70,6 +71,14 @@ const router = createBrowserRouter([
       {
         path: "/youtube",
         element: <YouTube></YouTube>,
+      },
+      {
+        path: "/allUser",
+        element: (
+          <PrivateRoute>
+            <AllUsers></AllUsers>
+          </PrivateRoute>
+        ),
       },
     ],
   },
