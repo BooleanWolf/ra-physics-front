@@ -4,9 +4,24 @@ import Physics from "./Physics";
 import { Link } from "react-router-dom";
 import Contact from "./Contact";
 import useTitle from "../../hooks/useTitle";
+import { AuthContext } from "./../Provider/Provider.jsx";
+import { useContext, useEffect, useState } from "react";
+
 
 const Home = () => {
   useTitle("Home");
+  const { user, logOut } = useContext(AuthContext);
+  const [allUsers, setAllUsers] = useState([]);
+
+  useEffect(() => {
+    fetch("https://ra-physics-back.vercel.app/users")
+      .then((res) => res.json())
+      .then((data) => setAllUsers(data));
+  }, []);
+
+
+  const userAdmin = allUsers.find((n) => n?.email == user?.email);
+
   return (
     <div className="mb-16">
       <div>
@@ -14,7 +29,7 @@ const Home = () => {
           <div id="slide1" className="carousel-item relative w-full">
             <img
               src="https://scontent.frjh1-1.fna.fbcdn.net/v/t39.30808-6/356660321_2528233510665853_2103152633883545906_n.jpg?_nc_cat=105&cb=99be929b-3346023f&ccb=1-7&_nc_sid=8631f5&_nc_eui2=AeFKCMRIK36r6Y3HzWGnecre_sv71TwkzGH-y_vVPCTMYf9VjC9GlqJ1gfkha4ceXsKLGlFJf8MuVK4CetLaDi5B&_nc_ohc=vS5-ZzCtQ5AAX9xxayB&_nc_ht=scontent.frjh1-1.fna&oh=00_AfDmUwLJz7ggIRy2VnM0twnzIaBee6aPvWuShowQkh--Yw&oe=649F3894"
-              className="w-full h-[800px]"
+              className="w-full h-full"
             />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a href="#slide4" className="btn btn-circle">
@@ -83,23 +98,63 @@ const Home = () => {
       </div>
 
       {/* banner end here */}
+      
+      {userAdmin?.role == "admin" ? (
+         <div className="h-72">
+            <h2 className="text-2xl font-semibold text-center mt-24">
+              Admin Panel
+            </h2>
+            <div className="grid  mt-8 gap-5 lg:grid-cols-3 text-center  lg:px-40 lg:py-8">
 
-      <div className="h-72">
+              <Link to='/alluser'>
+                  <button className="btn btn-primary">
+                        All Users
+                  </button>
+              </Link>
+             
+             <Link to='/addcourse'>
+                    <button className="btn btn-primary">
+                     Add Course
+                    </button>
+             </Link>
+          
+              <Link to='/allCourses'>
+                <button className="btn btn-primary">
+                     Update Course
+                </button>
+              </Link>
+            
+
+              <Link to='/allrequests'>
+                <button className="btn btn-primary">
+                     Requests
+                </button>
+              </Link>
+            
+            </div>
+          </div>
+      ) : (
+        ""
+      )
+      }
+     
+
+       <div className="h-72">
         <h2 className="text-2xl font-semibold text-center mt-24">
-          Our Success
+          Our Success in 2022-23
         </h2>
         <div className="grid  mt-8 gap-5 lg:grid-cols-3 text-center  lg:px-40 lg:py-8">
           <div>
-            <h1 className="text-2xl font-bold">2K+</h1>
+            <h1 className="text-2xl font-bold">45+</h1>
             <p>BUET</p>
           </div>
           <div>
-            <h1 className="text-2xl font-bold">100%</h1>
+            <h1 className="text-2xl font-bold">27</h1>
             <p>MEDICAL</p>
           </div>
           <div>
-            <h1 className="text-2xl font-bold">10k+</h1>
-            <p>CRUET</p>
+            <h1 className="text-2xl font-bold">90+</h1>
+            <p>CKRUET</p>
           </div>
         </div>
       </div>

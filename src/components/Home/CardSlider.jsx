@@ -27,7 +27,7 @@ const CardSlider = () => {
       </h2>
 
       <Slider className="mx-8  text-center " {...settings}>
-        <div className="p-2">
+        {/* <div className="p-2">
           <ReactPlayer
             controls
             url="https://youtu.be/-zj1JPQcLpg"
@@ -39,7 +39,7 @@ const CardSlider = () => {
               Go to Youtube
             </h2>
           </Link>
-        </div>
+        </div> */}
         <div className="p-2 ">
           <ReactPlayer
             controls

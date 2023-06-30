@@ -18,6 +18,11 @@ import YouTube from "./components/YouTube.jsx";
 import AuthProvider from "./components/Provider/Provider.jsx";
 import PrivateRoute from "./components/Private/PrivateRoute.jsx";
 import AllUsers from "./components/AllUsers/AllUsers.jsx";
+import AllRequests from "./components/AllUsers/AllRequests.jsx";
+import AddCourse from "./components/AllUsers/AddCourse.jsx";
+import AllCourses from "./components/AllUsers/AllCourses.jsx";
+import CourseUpdate from "./components/AllUsers/CourseUpdate.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -34,8 +39,9 @@ const router = createBrowserRouter([
         element: <Course></Course>,
       },
       {
-        path: "/demoLecture",
+        path: "/demoLecture/:id",
         element: <DemoLecture></DemoLecture>,
+        loader: ({ params }) => fetch(`https://ra-physics-back.vercel.app/courses/${params.id}`),
       },
 
       {
@@ -49,34 +55,62 @@ const router = createBrowserRouter([
       {
         path: "/courseAvailable",
         element: (
-          <PrivateRoute>
+       
             <CourseAvailable></CourseAvailable>
-          </PrivateRoute>
+       
         ),
         // loader: () => fetch("courses.json"),
       },
       {
         path: "/courseInfo/:id",
-        element: <CourseInfo></CourseInfo>,
-        loader: ({ params }) => fetch(`/courses.json/${params.id}`),
+        element: (
+          <PrivateRoute>
+              <CourseInfo></CourseInfo>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) => fetch(`https://ra-physics-back.vercel.app/courses/${params.id}`),
       },
       {
-        path: "/vector",
+        path: "/vector/:id",
         element: <Vector></Vector>,
+        loader: ({ params }) => fetch(`https://ra-physics-back.vercel.app/courses/${params.id}`),
       },
       {
-        path: "/lecture",
+        path: "/lecture/:id",
         element: <Lecture></Lecture>,
+        loader: ({ params }) => fetch(`https://ra-physics-back.vercel.app/courses_single_video/${params.id}`),
       },
       {
         path: "/youtube",
         element: <YouTube></YouTube>,
       },
       {
+        path: "/addCourse",
+        element: <AddCourse></AddCourse>,
+      },
+      {
         path: "/allUser",
         element: (
           <PrivateRoute>
             <AllUsers></AllUsers>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/allCourses",
+        element: <AllCourses></AllCourses>,
+      },
+      {
+        path: "/courseUpdate/:id",
+        element: <CourseUpdate></CourseUpdate>,
+        loader: ({ params }) => fetch(`https://ra-physics-back.vercel.app/courses/${params.id}`),
+      },
+
+      {
+        path: "/allrequests",
+        element: (
+          <PrivateRoute>
+            <AllRequests></AllRequests>
           </PrivateRoute>
         ),
       },

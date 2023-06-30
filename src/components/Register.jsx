@@ -55,7 +55,7 @@ const Register = () => {
           hscBatch: hsc_batch,
           role,
         };
-        fetch(`https://physics-server.vercel.app/users`, {
+        fetch(`https://ra-physics-back.vercel.app/users`, {
           method: "POST",
           headers: {
             "content-Type": "application/json",

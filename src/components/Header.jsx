@@ -32,7 +32,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    fetch("https://physics-server.vercel.app/users")
+    fetch("https://ra-physics-back.vercel.app/users")
       .then((res) => res.json())
       .then((data) => setAllUsers(data));
   }, []);
@@ -62,12 +62,22 @@ const Header = () => {
                     >
                       Home
                     </Link>
-                    {useAdmin?.role == "admin" ? (
+                    {/* {useAdmin?.role == "admin" ? (
                       <Link
                         to="/allUser"
                         className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                       >
                         AllUsers
+                      </Link>
+                    ) : (
+                      ""
+                    )} */}
+                    {useAdmin?.role == "students" ? (
+                      <Link
+                        to="/course"
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                      >
+                        My Inventory
                       </Link>
                     ) : (
                       ""
@@ -84,17 +94,17 @@ const Header = () => {
                     >
                       CourseVideo
                     </Link> */}
-                    <Link
-                      to="/vector"
+                    {/* <Link
+                      to="/incourse"
                       className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Incourse
-                    </Link>
+                    </Link> */}
                     <Link
                       to="/courseAvailable"
                       className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
-                      My Programs
+                      Shop
                     </Link>
                     <Link
                       to="/youtube"
@@ -195,12 +205,22 @@ const Header = () => {
           >
             Home
           </Link>
-          <Link
+          {useAdmin?.role == "students" ? (
+                      <Link
+                        to="/course"
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                      >
+                        My Inventory
+                      </Link>
+                    ) : (
+                      ""
+           )}
+          {/* <Link
             to="/allUser"
             className="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
           >
             Dashboard
-          </Link>
+          </Link> */}
           {/* <Link
             to="/demolecture"
             className="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
@@ -213,17 +233,17 @@ const Header = () => {
           >
             CourseVideo
           </Link> */}
-          <Link
+          {/* <Link
             to="/vector"
             className="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
           >
             Incourse
-          </Link>
+          </Link> */}
           <Link
             to="/courseAvailable"
             className="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
           >
-            My Programs
+            Shop
           </Link>
           <Link
             to="/youtube"
