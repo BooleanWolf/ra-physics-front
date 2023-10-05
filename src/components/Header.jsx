@@ -112,6 +112,12 @@ const Header = () => {
                     >
                       YouTube
                     </Link>
+                    <Link
+                      to="http://ra-shop-store.onrender.com/"
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      RA Exclusive shop
+                    </Link>
                   </div>
                 </div>
               </div>
